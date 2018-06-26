@@ -15,14 +15,14 @@ project "snap7"
 		"/usr/include/lua5.3",
 		".",
 		"../../",
-		"../snap7/release/Wrappers/c-cpp/",
+		"./snap7/release/Wrappers/c-cpp/",
 	}
 	files { 
 		"./src/**.hpp",
 		"./src/**.cpp",
 		"./sol/**.hpp",
-		"../snap7/release/Wrappers/c-cpp/**.h",
-		"../snap7/release/Wrappers/c-cpp/**.cpp",
+		"./snap7/release/Wrappers/c-cpp/**.h",
+		"./snap7/release/Wrappers/c-cpp/**.cpp",
 	}
 
 	-- buildoptions { '-Wno-unknown-warning', '-Wno-unknown-warning-option', '-Wall', '-Wextra', '-Wpedantic', '-pedantic', '-pedantic-errors', '-Wno-noexcept-type', '-std=c++14', '-ftemplate-depth=1024' }
@@ -47,13 +47,13 @@ project "snap7-static"
 	targetdir "bin/%{cfg.buildcfg}"
 
 	includedirs { 
-		"../snap7/src/sys/",
-		"../snap7/src/core/",
-		"../snap7/src/lib/",
+		"./snap7/src/sys/",
+		"./snap7/src/core/",
+		"./snap7/src/lib/",
 	}
 	files { 
-		"../snap7/src/**.h",
-		"../snap7/src/**.cpp",
+		"./snap7/src/**.h",
+		"./snap7/src/**.cpp",
 	}
 
 	buildoptions { '-Wpedantic', '-pedantic', '-pedantic-errors', '-Wno-noexcept-type', '-std=c++14', "-fPIC" }
