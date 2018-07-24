@@ -39,7 +39,7 @@ print("Dump:", basexx.to_hex(szl.Data:sub(1, size.value - 4)))
 local data = s7.UserData.new(65536)
 local size = s7.IntData.new(65536)
 local ret = client:Upload(s7.S7BlockType.SDB, 0, data.data, size.ptr)
-print("Upload:", ret)
+print("Upload:", ret, size.value)
 if ret ~= 0 then
 	print(s7.CliErrorText(ret))
 end
