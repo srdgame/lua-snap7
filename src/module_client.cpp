@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 
 #include "module_inc.h"
