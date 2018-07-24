@@ -161,8 +161,13 @@ void reg_module_types(sol::table& module) {
 	struct UserData {
 		void* data;
 		UserData(int size) {
-			data = malloc(sizeof(unsigned char) * size);
+			data = malloc(sizeof(char) * size);
 			memset(data, 0, size);
+		}
+		UserData(const char* src, int size) {
+			data = malloc(sizeof(char) * (size + 1));
+			memset(data, 0, size + 1);
+			memcpy(data, src, size);
 		}
 		~UserData() {
 			free(data);
@@ -176,7 +181,7 @@ void reg_module_types(sol::table& module) {
 	};
 
 	module.new_usertype<UserData>("UserData",
-		sol::constructors<UserData(int)>(),
+		sol::constructors<UserData(int), UserData(const char*, int)>(),
 		"data", &UserData::data,
 		"str", &UserData::str
 	);
@@ -184,6 +189,9 @@ void reg_module_types(sol::table& module) {
 	struct IntData {
 		int value;
 		IntData(int val) : value(val) {
+		}
+		operator int* () {
+			return &value;
 		}
 	};
 	module.new_usertype<IntData>("IntData",
