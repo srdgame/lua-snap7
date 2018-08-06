@@ -13,6 +13,11 @@ void reg_module_enums(sol::table& module) {
 		"RUN", S7CpuStatusRun, // 0x08
 		"STOP", S7CpuStatusStop // 0x04
 	);
+	module.new_enum("S7ServerStatus",
+		"STOPED", 0,
+		"RUNNING", 1,
+		"ERROR", 2
+	);
 	module.new_enum("S7IsoErrors",
 		"CONNECT", errIsoConnect, // Connection error
 		"DISCONNECT", errIsoDisconnect, // Disconnect error
