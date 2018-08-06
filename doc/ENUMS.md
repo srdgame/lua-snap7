@@ -2,6 +2,7 @@
 
 ## Contents
 * [errLib](#errlib)
+* [S7ServerStatus](#s7serverstatus)
 * [S7CpuStatus](#s7cpustatus)
 * [S7IsoErrors](#s7isoerrors)
 * [ParamList](#paramlist)
@@ -22,6 +23,15 @@ _Fields:_
 
 * INVALID_PARAM ( errLibInvalidParam )
 * INVALID_OBJECT ( errLibInvalidObject )
+
+### S7ServerStatus
+Server Status
+
+_Fields:_
+
+* STOPED => SrvStoped, // 0
+* RUNNING => SrvRunning, // 1
+* ERROR => SrvError // 2
 
 
 ### S7CpuStatus
