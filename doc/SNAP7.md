@@ -1,5 +1,7 @@
 # Snap7 stack library Lua binding
 
+Snap7 api document [link](http://snap7.sourceforge.net/)
+
 ## Functions
 
 * [CliErrorText](#clierrortext)
