@@ -18,7 +18,6 @@ N/A
 * Connect
 > Connects a Client Object to a PLC with implicit parameters.
 
-_function prototype_
 ``` c
     int Connect();
 ```
@@ -26,7 +25,6 @@ _function prototype_
 * ConnectTo
 > Connects a Client Object to a PLC.
 
-_function prototype_
 ``` c
     int ConnectTo(const char *RemAddress, int Rack, int Slot);
 ```
@@ -34,7 +32,6 @@ _function prototype_
 * SetConnectionParams
 > Sets IP, Local and Remote TSAP
 
-_function prototype_
 ``` c
     int SetConnectionParams(const char *RemAddress, word LocalTSAP, word RemoteTSAP);
 ```
@@ -42,7 +39,6 @@ _function prototype_
 * SetConnectionType
 > Set the connection type (PG/OP/S7 Basic)
 
-_function prototype_
 ``` c
     int SetConnectionType(word ConnectionType);
 ```
@@ -50,7 +46,6 @@ _function prototype_
 * Disconnect
 > Disconnects a Client.
 
-_function prototype_
 ``` c
     int Disconnect();
 ```
@@ -58,7 +53,6 @@ _function prototype_
 * GetParam
 > Reads an internal Client parameter.
 
-_function prototype_
 ``` c
     int GetParam(int ParamNumber, void *pValue);
 ```
@@ -66,7 +60,6 @@ _function prototype_
 * SetParam
 > Writes an internal Client Parameter.
 
-_function prototype_
 ``` c
     int SetParam(int ParamNumber, void *pValue);
 ```
@@ -76,7 +69,6 @@ _function prototype_
 * ReadArea
 > Reads a data area from a PLC.
 
-_function prototype_
 ``` c
     int ReadArea(int Area, int DBNumber, int Start, int Amount, int WordLen, void *pUsrData);
 ```
@@ -84,7 +76,6 @@ _function prototype_
 * WriteArea
 > Writes a data area into a PLC.
 
-_function prototype_
 ``` c
     int WriteArea(int Area, int DBNumber, int Start, int Amount, int WordLen, void *pUsrData);
 ```
@@ -92,7 +83,6 @@ _function prototype_
 * ReadMultiVars
 > Reads different kind of variables from a PLC simultaneously.
 
-_function prototype_
 ``` c
     int ReadMultiVars(PS7DataItem Item, int ItemsCount);
 ```
@@ -100,7 +90,6 @@ _function prototype_
 * WriteMultiVars
 > Writes different kind of variables into a PLC simultaneously.
 
-_function prototype_
 ``` c
     int WriteMultiVars(PS7DataItem Item, int ItemsCount);
 ```
@@ -110,7 +99,6 @@ _function prototype_
 * DBRead
 > Reads a part of a DB from a PLC.
 
-_function prototype_
 ``` c
     int DBRead(int DBNumber, int Start, int Size, void *pUsrData);
 ```
@@ -118,7 +106,6 @@ _function prototype_
 * DBWrite
 > Writes a part of a DB into a PLC.
 
-_function prototype_
 ``` c
     int DBWrite(int DBNumber, int Start, int Size, void *pUsrData);
 ```
@@ -126,7 +113,6 @@ _function prototype_
 * MBRead
 > Reads a part of Merkers area from a PLC.
 
-_function prototype_
 ``` c
     int MBRead(int Start, int Size, void *pUsrData);
 ```
@@ -134,7 +120,6 @@ _function prototype_
 * MBWrite
 > Writes a part of Merkers area into a PLC.
 
-_function prototype_
 ``` c
     int MBWrite(int Start, int Size, void *pUsrData);
 ```
@@ -142,7 +127,6 @@ _function prototype_
 * EBRead
 > Reads a part of IPI area from a PLC.
 
-_function prototype_
 ``` c
     int EBRead(int Start, int Size, void *pUsrData);
 ```
@@ -150,7 +134,6 @@ _function prototype_
 * EBWrite
 > Writes a part of IPI area into a PLC.
 
-_function prototype_
 ``` c
     int EBWrite(int Start, int Size, void *pUsrData);
 ```
@@ -158,7 +141,6 @@ _function prototype_
 * ABRead
 > Reads a part of IPU area from a PLC.
 
-_function prototype_
 ``` c
     int ABRead(int Start, int Size, void *pUsrData);
 ```
@@ -166,7 +148,6 @@ _function prototype_
 * ABWrite
 > Writes a part of IPU area into a PLC.
 
-_function prototype_
 ``` c
     int ABWrite(int Start, int Size, void *pUsrData);
 ```
@@ -174,7 +155,6 @@ _function prototype_
 * TMRead
 > Reads timers from a PLC.
 
-_function prototype_
 ``` c
     int TMRead(int Start, int Amount, void *pUsrData);
 ```
@@ -182,7 +162,6 @@ _function prototype_
 * TMWrite
 > Write timers into a PLC.
 
-_function prototype_
 ``` c
     int TMWrite(int Start, int Amount, void *pUsrData);
 ```
@@ -190,7 +169,6 @@ _function prototype_
 * CTRead
 > Reads counters from a PLC.
 
-_function prototype_
 ``` c
     int CTRead(int Start, int Amount, void *pUsrData);
 ```
@@ -198,7 +176,6 @@ _function prototype_
 * CTWrite
 > Write counters into a PLC.
 
-_function prototype_
 ``` c
     int CTWrite(int Start, int Amount, void *pUsrData);
 ```
@@ -208,7 +185,6 @@ _function prototype_
 * ListBlocks
 > Returns the AG blocks amount divided by type.
 
-_function prototype_
 ``` c
     int ListBlocks(PS7BlocksList pUsrData);
 ```
@@ -216,7 +192,6 @@ _function prototype_
 * GetAgBlockInfo
 > Returns detailed information about a block present in AG.
 
-_function prototype_
 ``` c
     int GetAgBlockInfo(int BlockType, int BlockNum, PS7BlockInfo pUsrData);
 ```
@@ -224,7 +199,6 @@ _function prototype_
 * GetPgBlockInfo
 > Returns detailed information about a block loaded in memory.
 
-_function prototype_
 ``` c
     int GetPgBlockInfo(void *pBlock, PS7BlockInfo pUsrData, int Size);
 ```
@@ -232,7 +206,6 @@ _function prototype_
 * ListBlocksOfType
 > Returns the AG blocks list of a given type.
 
-_function prototype_
 ``` c
     int ListBlocksOfType(int BlockType, TS7BlocksOfType *pUsrData, int *ItemsCount);
 ```
@@ -242,7 +215,6 @@ _function prototype_
 * Upload
 > Uploads a block from AG.
 
-_function prototype_
 ``` c
     int Upload(int BlockType, int BlockNum, void *pUsrData, int *Size);
 ```
@@ -250,7 +222,6 @@ _function prototype_
 * FullUpload
 > Uploads a block from AG with Header and Footer infos.
 
-_function prototype_
 ``` c
     int FullUpload(int BlockType, int BlockNum, void *pUsrData, int *Size);
 ```
@@ -258,7 +229,6 @@ _function prototype_
 * Download
 > Download a block into AG.
 
-_function prototype_
 ``` c
     int Download(int BlockNum, void *pUsrData, int Size);
 ```
@@ -266,7 +236,6 @@ _function prototype_
 * Delete
 > Delete a block into AG.
 
-_function prototype_
 ``` c
     int Delete(int BlockType, int BlockNum);
 ```
@@ -274,7 +243,6 @@ _function prototype_
 * DBGet
 > Uploads a DB from AG using DBRead.
 
-_function prototype_
 ``` c
     int DBGet(int DBNumber, void *pUsrData, int *Size);
 ```
@@ -282,7 +250,6 @@ _function prototype_
 * DBFill
 > Fills a DB in AG with a given byte.
 
-_function prototype_
 ``` c
     int DBFill(int DBNumber, int FillChar);
 ```
@@ -292,7 +259,6 @@ _function prototype_
 * GetPlcDateTime
 > Returns the PLC date/time.
 
-_function prototype_
 ``` c
     int GetPlcDateTime(tm *DateTime);
 ```
@@ -300,7 +266,6 @@ _function prototype_
 * SetPlcDateTime
 > Sets the PLC date/time with a given value.
 
-_function prototype_
 ``` c
     int SetPlcDateTime(tm *DateTime);
 ```
@@ -308,7 +273,6 @@ _function prototype_
 * SetPlcSystemDateTime
 > Sets the PLC date/time with the host (PC) date/time.
 
-_function prototype_
 ``` c
     int SetPlcSystemDateTime();
 ```
@@ -318,7 +282,6 @@ _function prototype_
 * GetOrderCode
 > Returns the CPU order code.
 
-_function prototype_
 ``` c
     int GetOrderCode(PS7OrderCode pUsrData);
 ```
@@ -326,7 +289,6 @@ _function prototype_
 * GetCpuInfo
 > Returns some information about the AG.
 
-_function prototype_
 ``` c
     int GetCpuInfo(PS7CpuInfo pUsrData);
 ```
@@ -334,7 +296,6 @@ _function prototype_
 * GetCpInfo
 > Returns some information about the CP (communication processor).
 
-_function prototype_
 ``` c
     int GetCpInfo(PS7CpInfo pUsrData);
 ```
@@ -342,7 +303,6 @@ _function prototype_
 * ReadSZL
 > Reads a partial list of given ID and Index.
 
-_function prototype_
 ``` c
 	int ReadSZL(int ID, int Index, PS7SZL pUsrData, int *Size);
 ```
@@ -350,7 +310,6 @@ _function prototype_
 * ReadSZLList
 > Reads the list of partial lists available in the CPU.
 
-_function prototype_
 ``` c
 	int ReadSZLList(PS7SZLList pUsrData, int *ItemsCount);
 ```
@@ -360,7 +319,6 @@ _function prototype_
 * PlcHotStart
 > Puts the CPU in RUN mode performing an HOT START.
 
-_function prototype_
 ``` c
 	int PlcHotStart();
 ```
@@ -368,7 +326,6 @@ _function prototype_
 * PlcColdStart
 > Puts the CPU in RUN mode performing a COLD START.
 
-_function prototype_
 ``` c
 	int PlcColdStart();
 ```
@@ -376,7 +333,6 @@ _function prototype_
 * PlcStop
 > Puts the CPU in STOP mode.
 
-_function prototype_
 ``` c
 	int PlcStop();
 ```
@@ -384,7 +340,6 @@ _function prototype_
 * CopyRamToRom
 > Performs the Copy Ram to Rom action.
 
-_function prototype_
 ``` c
 	int CopyRamToRom(int Timeout);
 ```
@@ -392,7 +347,6 @@ _function prototype_
 * Compress
 > Performs the Compress action.
 
-_function prototype_
 ``` c
 	int Compress(int Timeout);
 ```
@@ -402,7 +356,6 @@ _function prototype_
 * GetProtection
 > Gets the CPU protection level info.
 
-_function prototype_
 ``` c
 	int GetProtection(PS7Protection pUsrData);
 ```
@@ -410,7 +363,6 @@ _function prototype_
 * SetSessionPassword
 > Send the password to the PLC to meet its security level.
 
-_function prototype_
 ``` c
 	int SetSessionPassword(char *Password);
 ```
@@ -418,7 +370,6 @@ _function prototype_
 * ClearSessionPassword
 > Clears the password set for the current session (logout).
 
-_function prototype_
 ``` c
 	int ClearSessionPassword();
 ```
@@ -428,7 +379,6 @@ _function prototype_
 * ExecTime
 > Returns the last job execution time in milliseconds.
 
-_function prototype_
 ``` c
 	int ExecTime();
 ```
@@ -436,7 +386,6 @@ _function prototype_
 * LastError
 > Returns the last job result.
 
-_function prototype_
 ``` c
 	int LastError();
 ```
@@ -444,7 +393,6 @@ _function prototype_
 * PDURequested
 > Returns info about the PDU length (requested).
 
-_function prototype_
 ``` c
 	int PDURequested();
 ```
@@ -452,7 +400,6 @@ _function prototype_
 * PDULength
 > Returns info about the PDU length (negotiated).
 
-_function prototype_
 ``` c
 	int PDULength();
 ```
@@ -460,7 +407,6 @@ _function prototype_
 * PlcStatus
 > Returns the CPU status (running/stopped).
 
-_function prototype_
 ``` c
 	int PlcStatus();
 ```
@@ -468,7 +414,6 @@ _function prototype_
 * Connected
 > Returns the connection state.
 
-_function prototype_
 ``` c
 	bool Connected();
 ```
