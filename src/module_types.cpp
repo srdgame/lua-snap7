@@ -147,7 +147,7 @@ void reg_module_types(sol::table& module) {
 
 	module.new_usertype<TS7SZLList>("TS7SZLList",
 		"Header", &TS7SZLList::Header,
-		MAP_DATA_SIZE(TS7SZLList, List, 0x2000-2)
+		MAP_DATA_SIZE(TS7SZLList, List, 2 * (0x2000-2))
 	);
 
 	module.new_usertype<TS7Protection>("TS7Protection",
@@ -172,7 +172,7 @@ void reg_module_types(sol::table& module) {
 		~UserData() {
 			free(data);
 		}
-		std::string str(int size) {
+		const std::string str(int size) {
 			return std::string((char*)data, size);
 		}
 	private:
