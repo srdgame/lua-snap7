@@ -230,11 +230,15 @@ Create new user data object with string context and specified length.
 #### Member variables
 
 * data (user data | void *)
-* str (string | readonly)
 
 #### Methods
 
-N/A
+* str(size)
+> Returns string data in specified size.
+
+``` lua
+	local str = data:str(16)
+```
 
 
 ### IntData
