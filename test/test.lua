@@ -4,7 +4,10 @@ local basexx = require 'basexx'
 local client = s7.TS7Client.new()
 assert(client)
 --print(client)
---print(client:Connected())
+print(client:Connected())
+local ret = client:Connect()
+print(s7.CliErrorText(ret))
+print(s7.test_text(ret))
 
 --print(client:Connect())
 print("Connect:\t", client:ConnectTo("127.0.0.1", 0, 2))

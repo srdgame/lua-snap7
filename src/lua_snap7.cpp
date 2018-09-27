@@ -15,10 +15,10 @@ namespace lua_module {
 		reg_module_client(module);
 		reg_module_server(module);
 
-		module.set_function("CliErrorText", CliErrorText);
-		module.set_function("SrvErrorText", SrvErrorText);
-		module.set_function("ParErrorText", ParErrorText);
-		module.set_function("SrvEventText", SrvEventText);
+		module.set_function("CliErrorText", [](int err) { return CliErrorText(err); });
+		module.set_function("SrvErrorText", [](int err) { return SrvErrorText(err); });
+		module.set_function("ParErrorText", [](int err) { return ParErrorText(err); });
+		module.set_function("SrvEventText", [](TSrvEvent *Event) { return SrvEventText(Event); });
 
 		return module;
 	}
