@@ -229,7 +229,7 @@ Create new user data object with string context and specified length.
 
 #### Member variables
 
-* data (user data)
+* data (user data | void *)
 * str (string | readonly)
 
 #### Methods
@@ -246,8 +246,8 @@ Create new integer object default value.
 
 #### Member variables
 
-* data (user data)
-* str (string | readonly)
+* ptr (integer pointer | int *)
+* value (integer | readonly)
 
 #### Methods
 
