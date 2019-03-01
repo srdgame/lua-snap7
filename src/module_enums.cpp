@@ -153,6 +153,14 @@ void reg_module_enums(sol::table& module) {
 		"GRAPH", BlockLangGRAPH
 	);
 
+	module.new_enum("S7SrvArea",
+		"PE", srvAreaPE,
+		"PA", srvAreaPA,
+		"MK", srvAreaMK,
+		"CT", srvAreaCT,
+		"TM", srvAreaTM,
+		"DB", srvAreaDB
+	);
 }
 
 }

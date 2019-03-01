@@ -200,6 +200,49 @@ void reg_module_types(sol::table& module) {
 		"ptr", sol::property([](IntData& obj) { return &obj.value; })
 	);
 
+	struct DBArea {
+		void* _data;
+		int _size;
+		DBArea(int size) {
+			_data = malloc(sizeof(char) * size);
+			memset(_data, 0, size);
+			_size = size;
+		}
+		DBArea(const char* src, int size) {
+			_data = malloc(sizeof(char) * size);
+			memcpy(_data, src, size);
+			_size = size;
+		}
+		~DBArea() {
+			free(_data);
+		}
+
+		const std::string read() {
+			return std::string((char*)_data, _size);
+		}
+		const std::string read(int index, int size) {
+			return std::string((char*)_data + index, size);
+		}
+
+		int write(int index, const char* src, int size) {
+			if (index + size > _size) {
+				return -1;
+			}
+			memcpy((char*)_data + index, src, size);
+			return size;
+		}
+	};
+
+	module.new_usertype<DBArea>("DBArea",
+		sol::constructors<DBArea(int), DBArea(const char*, int)>(),
+		"data", &DBArea::_data,
+		"size", &DBArea::_size,
+		"read", sol::overload(
+			static_cast<const std::string (DBArea::*)() >(&DBArea::read),
+			static_cast<const std::string (DBArea::*)(int, int) >(&DBArea::read)
+		),
+		"write", &DBArea::write
+	);
 }
 
 }
