@@ -111,7 +111,9 @@ void reg_module_enums(sol::table& module) {
 		"MK", S7AreaMK,
 		"DB", S7AreaDB,
 		"CT", S7AreaCT,
-		"TM", S7AreaTM
+		"TM", S7AreaTM,
+		"CT2", S7AreaCT2,
+		"TM2", S7AreaTM2
 	);
 
 	module.new_enum("S7WordLen",
@@ -121,7 +123,9 @@ void reg_module_enums(sol::table& module) {
 		"DWord", S7WLDWord,
 		"Real", S7WLReal,
 		"Counter", S7WLCounter,
-		"Timer", S7WLTimer
+		"Timer", S7WLTimer,
+		"Counter", S7WLCounter2,
+		"Timer", S7WLTimer2
 	);
 
 	module.new_enum("S7BlockType",

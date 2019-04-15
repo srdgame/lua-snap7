@@ -180,6 +180,33 @@ N/A
     int CTWrite(int Start, int Amount, void *pUsrData);
 ```
 
+* TM2Read
+> Reads timers (ex format) from a PLC.
+
+``` c
+    int TM2Read(int Start, int Amount, void *pUsrData);
+```
+
+* TM2Write
+> Write timers (ex format) into a PLC.
+
+``` c
+    int TM2Write(int Start, int Amount, void *pUsrData);
+```
+
+* CT2Read
+> Reads counters (ex format) from a PLC.
+
+``` c
+    int CT2Read(int Start, int Amount, void *pUsrData);
+```
+
+* CT2Write
+> Write counters (ex format) into a PLC.
+
+``` c
+    int CT2Write(int Start, int Amount, void *pUsrData);
+```
 #### Directory functions
 
 * ListBlocks

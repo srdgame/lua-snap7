@@ -42,6 +42,10 @@ void reg_module_client(sol::table& module) {
 		"TMWrite", &TS7Client::TMWrite,
 		"CTRead", &TS7Client::CTRead,
 		"CTWrite", &TS7Client::CTWrite,
+		"TM2Read", &TS7Client::TM2Read,
+		"TM2Write", &TS7Client::TM2Write,
+		"CT2Read", &TS7Client::CT2Read,
+		"CT2Write", &TS7Client::CT2Write,
 		"ListBlocks", &TS7Client::ListBlocks,
 		"GetAgBlockInfo", &TS7Client::GetAgBlockInfo,
 		"GetPgBlockInfo", &TS7Client::GetPgBlockInfo,
@@ -99,6 +103,10 @@ void reg_module_client(sol::table& module) {
 		"AsTMWrite", &TS7Client::AsTMWrite,
 		"AsCTRead", &TS7Client::AsCTRead,
 		"AsCTWrite", &TS7Client::AsCTWrite,
+		"AsTM2Read", &TS7Client::AsTM2Read,
+		"AsTM2Write", &TS7Client::AsTM2Write,
+		"AsCT2Read", &TS7Client::AsCT2Read,
+		"AsCT2Write", &TS7Client::AsCT2Write,
 		"AsDBGet", &TS7Client::AsDBGet,
 		"AsDBFill", &TS7Client::AsDBFill
 		*/
