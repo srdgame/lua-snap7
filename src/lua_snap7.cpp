@@ -1,6 +1,8 @@
 
 #include "module_inc.h"
 
+#define SNAP7_VERSION 1.41
+
 namespace lua_module {
 	void reg_module_enums(sol::table& module);
 	void reg_module_types(sol::table& module);
@@ -19,6 +21,11 @@ namespace lua_module {
 		module.set_function("SrvErrorText", [](int err) { return SrvErrorText(err); });
 		module.set_function("ParErrorText", [](int err) { return ParErrorText(err); });
 		module.set_function("SrvEventText", [](TSrvEvent *Event) { return SrvEventText(Event); });
+
+		/**
+		 * Module version
+		 */
+		module["VERSION"] = SNAP7_VERSION;
 
 		return module;
 	}
