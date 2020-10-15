@@ -31,7 +31,15 @@ jobs:
         with:
           action: build_ext_all.sh
 
+      - name: Run echo 
+        run: echo "AAAAAAAA" > /__install/aaa.txt
+
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
           path: /__install/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact-1
+          path: /__install/aaa.txt
