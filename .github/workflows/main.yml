@@ -27,6 +27,7 @@ jobs:
         run: git submodule update --init --recursive
 
       - uses: freeioe/freeioe_build_action@v1
+        id: build
         with:
           action: build_ext_all.sh
 
