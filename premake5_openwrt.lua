@@ -14,6 +14,7 @@ project "snap7"
 	includedirs { 
 		--"/usr/include/lua5.3",
 		"/home/cch/mycode/skynet/3rd/lua/",
+		".",
 		"./snap7/release/Wrappers/c-cpp/",
 	}
 	files { 
