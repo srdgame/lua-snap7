@@ -12,10 +12,9 @@ project "snap7"
 	dependson { "snap7-static" }
 
 	includedirs { 
-		"/home/cch/mycode/skynet/3rd/lua/",
 		--"/usr/include/lua5.3",
+		"/home/cch/mycode/skynet/3rd/lua/",
 		".",
-		"../../",
 		"./snap7/release/Wrappers/c-cpp/",
 	}
 	files { 
