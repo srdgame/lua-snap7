@@ -26,10 +26,10 @@ jobs:
       - name: Submodules update
         run: git submodule update --init --recursive
 
-      - uses: freeioe/freeioe_build_action@v1
+      - uses: freeioe/freeioe_build_action@v1.1
         id: build
         with:
-          action: build_ext_all.sh
+          action: extension
 
       - uses: actions/upload-artifact@v2
         with:
