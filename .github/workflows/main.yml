@@ -33,5 +33,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: ${{ github.repository }}
+          name: lua-snap7
           path: ${{ github.workspace }}/__output/**/*
