@@ -20,8 +20,8 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // This file was generated with a script.
-// Generated 2020-10-12 12:01:46.950366 UTC
-// This header was generated with sol v2.20.6 (revision 902ceaf8)
+// Generated 2022-04-11 01:45:33.320064 UTC
+// This header was generated with sol v2.20.6 (revision cfb5d6ca)
 // https://github.com/ThePhD/sol2
 
 #ifndef SOL_SINGLE_INCLUDE_HPP
@@ -7169,6 +7169,7 @@ namespace sol {
 #include <vector>
 #include <forward_list>
 #include <algorithm>
+#include <limits>
 #if defined(SOL_CXX17_FEATURES) && SOL_CXX17_FEATURES
 #endif // C++17
 
@@ -10352,7 +10353,6 @@ namespace stack {
 
 // beginning of sol/stack_push.hpp
 
-#include <limits>
 #if defined(SOL_CXX17_FEATURES) && SOL_CXX17_FEATURES
 #if defined(SOL_STD_VARIANT) && SOL_STD_VARIANT
 #endif // Can use variant
